@@ -1,4 +1,4 @@
-const CACHE='luna-shell-v16';
+const CACHE='luna-shell-v17';
 const ASSETS=['./','./index.html','./style.css','./app.js','./manifest.json','./icon.svg','./icon-192.png','./icon-512.png'];
 const APP_FILES=/\/(?:index\.html|app\.js|style\.css|manifest\.json)?$/;
 
