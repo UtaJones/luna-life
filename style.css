@@ -110,3 +110,24 @@ input,select,.module-form textarea,.inline-form input,.inline-form select{backgr
   .detail-view .module{width:auto;text-align:center;padding:10px 4px;font-size:13px}
   .calendar-cell{aspect-ratio:1/1;min-height:0;border-radius:12px}
 }
+
+/* 首页层级：模块是主入口，状态与回顾为辅助信息 */
+.home-section-label{font-size:14px;color:#765da8;font-weight:600;margin-top:12px}
+.home-grid{gap:14px}
+.home-card{min-height:148px;box-shadow:0 12px 28px rgba(74,63,94,.12)}
+.today-dashboard{margin-top:18px;transform:scale(.96);transform-origin:top center}
+.review-card{transform:scale(.94);transform-origin:top center;margin-top:-2px}
+
+/* 三个模块详情统一纵向空间，空内容也保持稳定布局 */
+.personal-modules{min-height:620px}
+.module-items{min-height:560px}
+.module-items>.empty{min-height:180px;display:flex;align-items:center;justify-content:center}
+#homeView.hidden,#detailView.hidden,#homeView[hidden],#detailView[hidden]{display:none!important}
+@media(max-width:699px){
+  .home-grid{gap:9px}
+  .home-card{min-height:82px}
+  .today-dashboard{transform:scale(.94);margin-bottom:-8px}
+  .review-card{transform:scale(.92);margin-top:-10px}
+  .personal-modules{min-height:600px}
+  .module-items{min-height:540px}
+}

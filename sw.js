@@ -1,4 +1,4 @@
-const CACHE='luna-shell-v6';
+const CACHE='luna-shell-v7';
 const ASSETS=['./','./index.html','./style.css','./app.js','./manifest.json','./icon.svg'];
 self.addEventListener('install',event=>event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(ASSETS)).then(()=>self.skipWaiting())));
 self.addEventListener('activate',event=>event.waitUntil(self.clients.claim()));
