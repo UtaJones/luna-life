@@ -1,0 +1,12 @@
+{
+  "name": "LUNA 生活轨迹",
+  "short_name": "LUNA",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f3f3f7",
+  "theme_color": "#765da8",
+  "description": "银紫色个人财务与成长管理工具",
+  "icons": [
+    {"src":"icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}
+  ]
+}
