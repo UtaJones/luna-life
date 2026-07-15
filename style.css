@@ -59,3 +59,54 @@ input,select,.module-form textarea,.inline-form input,.inline-form select{backgr
 .home-view{justify-content:flex-start;padding-top:34px}.today-dashboard{margin-top:22px}.dashboard-heading{display:flex;align-items:end;justify-content:space-between;margin-bottom:12px}.dashboard-heading h2,.review-card h2{margin:5px 0 0;font-size:22px;color:#403451}.muted{color:#9288a1;font-size:13px}.dashboard-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.dashboard-card{min-height:128px;padding:17px;border-radius:20px;background:linear-gradient(145deg,#fff,#e9e7f0);border:1px solid #ded8e9;box-shadow:0 10px 28px rgba(74,63,94,.08);display:flex;flex-direction:column;justify-content:space-between;animation:fadeUp .35s ease both}.dashboard-card small{color:#7e7590;font-size:13px}.dashboard-card b{font-size:25px;color:#5f4b89}.dashboard-card span{font-size:12px;color:#9a91a8}.review-card{margin-top:18px;padding:19px 20px;border-radius:22px;background:linear-gradient(145deg,#eeeaf5,#d8d0e8);border:1px solid #d6cee5;box-shadow:0 12px 30px rgba(74,63,94,.09);animation:fadeUp .45s ease both}.review-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:18px}.review-grid span{display:grid;gap:4px}.review-grid b{font-size:17px;color:#604b8c}.review-grid small{color:#857b96;font-size:12px}.home-section-label{margin:28px 0 10px;color:#8e849d;font-size:12px;letter-spacing:1px}.home-grid{grid-template-columns:repeat(3,1fr)}.home-card{min-height:145px;padding:18px;border-radius:22px}.home-icon{margin-bottom:20px;font-size:27px}@media(max-width:699px){.home-view{padding-top:18px}.dashboard-grid{grid-template-columns:1fr;gap:9px}.dashboard-card{min-height:92px}.review-card{padding:16px}.home-grid{grid-template-columns:1fr;gap:10px}.home-card{min-height:110px}.home-icon{margin-bottom:10px}.review-grid b{font-size:15px}}
 
 .form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.module-form label,.module-form input,.module-form textarea,.module-form select{display:block;width:100%;box-sizing:border-box}.module-form label{color:#706680;font-size:13px}.module-form input,.module-form textarea,.module-form select,.inline-form input,.inline-form select{margin-top:6px;border:1px solid #e2ddec;border-radius:12px;background:#fbfaff;color:#403451;padding:10px 11px;font:inherit}.module-form textarea{min-height:84px;resize:vertical}.inline-form{display:grid;grid-template-columns:1fr 120px auto;gap:8px;margin-top:14px}.inline-form input,.inline-form select{margin-top:0}.progress-wrap{background:#fff;border:1px solid #e7e1ef;border-radius:16px;padding:14px;margin-top:14px}.progress-label{display:flex;justify-content:space-between;color:#756b83;font-size:13px}.progress-label b{color:#765da8}.progress{height:8px;background:#eeeaf5;border-radius:99px;overflow:hidden;margin-top:9px}.progress span{display:block;height:100%;background:#a68dcc;border-radius:99px;transition:width .55s cubic-bezier(.22,1,.36,1)}.module-card small{display:block;margin-top:6px}.card-delete{border:0;background:transparent;color:#aa9cb5;font-size:20px;cursor:pointer}.card-delete:hover{color:#765da8}.empty{padding:28px 16px;text-align:center;background:#faf8fd;border:1px dashed #ddd4ec;border-radius:16px}.trend{min-height:110px}.trend-bar{display:block;flex:1}.card-actions button{cursor:pointer}@media(max-width:560px){.form-grid{grid-template-columns:1fr}.inline-form{grid-template-columns:1fr 1fr}.inline-form .primary{grid-column:1/-1}.module-form{padding:14px}.trend{gap:4px}}
+/* 手机优先首页：先进入模块，再看摘要信息 */
+.app{max-width:480px;margin:0 auto;padding:20px 16px 56px}
+.home-view{display:flex;flex-direction:column;justify-content:flex-start;min-height:100vh;padding-top:8px}
+.home-view>.eyebrow,.home-view>h1,.home-view>.home-subtitle{order:0}
+.home-section-label{order:1;margin:16px 0 8px}
+.home-grid{order:2;display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.home-card{min-height:104px;padding:13px 11px;border-radius:18px;display:flex;flex-direction:column;justify-content:space-between}
+.home-icon{font-size:20px;margin:0;color:#8069a9}
+.home-card b{font-size:16px;margin:0}
+.home-card small{font-size:10px;line-height:1.35;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.today-dashboard{order:3;margin-top:18px}
+.dashboard-heading{margin-bottom:8px}.dashboard-heading h2,.review-card h2{font-size:18px}
+.dashboard-grid{grid-template-columns:repeat(3,1fr);gap:7px}
+.dashboard-card{min-height:78px;padding:10px 9px;border-radius:15px}
+.dashboard-card small{font-size:11px}.dashboard-card b{font-size:18px}.dashboard-card span{font-size:10px}
+.review-card{order:4;margin-top:12px;padding:12px 13px;border-radius:16px}
+.review-card .eyebrow{font-size:10px}.review-grid{margin-top:10px;gap:6px}.review-grid b{font-size:13px}.review-grid small{font-size:10px}
+@media(min-width:700px){.app{max-width:480px;margin:0 auto;padding:24px 18px 70px}.home-grid{grid-template-columns:repeat(3,1fr)}}
+
+/* 页面切换时只保留当前页面，避免首页与次级页面上下叠加 */
+.home-view.hidden,.detail-view.hidden{display:none!important}
+@media(max-width:520px){
+  .home-grid{grid-template-columns:1fr;gap:8px}
+  .home-card{min-height:68px;padding:10px 13px;display:grid;grid-template-columns:30px 1fr;grid-template-rows:1fr 1fr;column-gap:8px;align-items:center}
+  .home-icon{grid-row:1 / span 2;align-self:center;font-size:21px}
+  .home-card b{font-size:16px;align-self:end}
+  .home-card small{font-size:10px;align-self:start}
+  .calendar-cell{aspect-ratio:1/1;min-height:0;border-radius:12px;padding:6px;font-size:12px}
+  .calendar-cell small{font-size:9px;margin-top:4px}
+}
+
+/* 最终响应式规范：仅保留 PC 与手机两种尺寸 */
+[hidden],.hidden{display:none!important}
+.app{width:100%;margin:0 auto}
+@media(min-width:700px){
+  .app{max-width:1180px;padding:32px 30px 90px}
+  .home-view{max-width:1120px;margin:0 auto}
+  .detail-view{max-width:1120px;margin:0 auto;padding-left:176px}
+  .detail-view .module-switch{left:0;top:108px;width:150px}
+  .home-grid{grid-template-columns:repeat(3,1fr);gap:14px}
+  .home-card{min-height:150px;padding:20px;border-radius:22px}
+  .home-card b{font-size:21px}.home-card small{font-size:12px}
+  .dashboard-grid{grid-template-columns:repeat(3,1fr)}
+}
+@media(max-width:699px){
+  .app{max-width:430px;padding:16px 14px 64px}
+  .detail-view{padding-left:0;width:100%}
+  .detail-view .module-switch{position:static;width:100%;display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin:8px 0 16px}
+  .detail-view .module{width:auto;text-align:center;padding:10px 4px;font-size:13px}
+  .calendar-cell{aspect-ratio:1/1;min-height:0;border-radius:12px}
+}
