@@ -123,6 +123,7 @@ input:invalid:not(:placeholder-shown){border-color:#ddd8e5;box-shadow:none}
 .module-card:hover,.record:hover,.stat:hover,.metric:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(74,63,94,.13)}
 .primary{transition:background .2s ease,transform .12s ease,box-shadow .2s ease}
 .primary:hover{box-shadow:0 8px 18px rgba(118,93,168,.22)}
+.section-title #addTop{position:relative;z-index:20;pointer-events:auto;touch-action:manipulation}
 .progress span{animation:progressIn .7s cubic-bezier(.22,1,.36,1) both}
 @keyframes progressIn{from{transform:scaleX(0);transform-origin:left}to{transform:scaleX(1);transform-origin:left}}
 
